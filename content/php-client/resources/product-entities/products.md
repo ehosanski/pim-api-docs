@@ -1,6 +1,6 @@
-## Product
+### Product
 
-### Get a product 
+#### Get a product 
 
 ```php
 $client = new \Akeneo\Pim\ApiClient\AkeneoPimClientBuilder('http://akeneo.com/')->buildAuthenticatedByPassword('client_id', 'secret', 'admin', 'admin');
@@ -47,11 +47,11 @@ You can get more information about the returned format of the product values [he
 
 In the Enterprise Edition, the response contains one more field `metadata`. Look at the [product drafts](/php-client/ee-resources.html#product-draft) for an example.
 
-### Get a list of products 
+#### Get a list of products 
 
 There are two ways of getting products. Also, you have a search builder to ease the construction of a research.
 
-#### Search builder
+##### Search builder
 
 You can search over the products, thanks to a list of filters.
 An helper has been added to ease the construction of these filters.
@@ -70,7 +70,7 @@ $searchBuilder
 $searchFilters = $searchBuilder->getFilters();
 ```
 
-#### By getting pages
+**By getting pages**
 
 This method allows to get products page per page, as a classical pagination. You can research products thanks to the search builder.
 
@@ -105,7 +105,7 @@ You can get more information about this method [here](/php-client/list-resources
 
 You can get more information about the available query parameters [here](/api-reference.html#get_products).
 
-#### With a cursor
+**With a cursor**
 
 This method allows to iterate the products. It will automatically get the next pages for you.
 With this method, it's not possible to get the previous page, or getting the total number of products.
@@ -134,7 +134,7 @@ You can get more information about this method [here](/php-client/list-resources
 
 You can get more information about the available query parameters [here](/api-reference.html#get_products).
 
-### Create a product 
+#### Create a product 
 
 If the product does not exist yet, this method creates it, otherwise it throws an exception.
 
@@ -182,7 +182,7 @@ $client->getProductApi()->create('top', [
 
 You can get more information about the expected format of the product values [here](/documentation/resources.html#product-values).
 
-### Upsert a product 
+#### Upsert a product 
 
 If the product does not exist yet, this method creates it, otherwise it updates it.
 
@@ -235,7 +235,7 @@ If you are using a v2.0 Entreprise Edition PIM, permissions based on your user g
 If you have edit rights but do not own the product, then it will create a [product draft](/php-client/ee-resources.html#product-draft) instead of updating the product.
 :::
 
-### Upsert a list of products 
+#### Upsert a list of products 
 
 This method allows to create or update a list of products.
 It has the same behavior as the `upsert` method for a single product, except that the code must be specified in the data of each product.
@@ -291,7 +291,7 @@ There is a limit on the maximum number of products that you can upsert in one ti
 
 You can get a complete description of the expected format and the returned format [here](/api-reference.html#get_products__code_).
 
-### Delete a product
+#### Delete a product
 
 ```php
 $client = new \Akeneo\Pim\ApiClient\AkeneoPimClientBuilder('http://akeneo.com/')->buildAuthenticatedByPassword('client_id', 'secret', 'admin', 'admin');

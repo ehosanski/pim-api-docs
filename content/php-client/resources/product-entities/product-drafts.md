@@ -1,6 +1,10 @@
-## Product draft
+### Product draft
 
-### Get a product draft 
+::: warning
+This resource is only available in the [Entreprise Edition](https://www.akeneo.com/enterprise-edition/).
+:::
+
+#### Get a product draft 
 
 ```php
 $client = new \Akeneo\PimEnterprise\ApiClient\AkeneoPimEnterpriseClientBuilder('http://akeneo.com/')->buildAuthenticatedByPassword('client_id', 'secret', 'admin', 'admin');
@@ -49,7 +53,7 @@ You can get more information about the returned format of the product values [he
 
 The field `metadata` is specific to Akeneo PIM Enterprise Edition. The status of the draft is specified in this field.
 
-### Submit a product draft for approval
+#### Submit a product draft for approval
 
 ```php
 $client = new \Akeneo\PimEnterprise\ApiClient\AkeneoPimEnterpriseClientBuilder('http://akeneo.com/')->buildAuthenticatedByPassword('client_id', 'secret', 'admin', 'admin');
