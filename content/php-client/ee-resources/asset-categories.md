@@ -1,7 +1,11 @@
 ## Asset categories
 
 :::warning
-Only available since the version 1.1 of the API PHP client
+This resource is only available in the [Entreprise Edition](https://www.akeneo.com/enterprise-edition/).
+:::
+
+:::warning
+This resource is only available since the version 1.1 of the PHP API client.
 :::
 
 ### Get an asset category
